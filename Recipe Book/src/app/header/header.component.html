@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(157, 220, 157);">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <a href="#" class=" navbar-brand">Recipe Book</a>
+        </div>
+
+        <button class="navbar-toggler togger"type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"(click)="display()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <ul class="nav navbar-nav medi" style="margin-right: 100px;"*ngIf="inner">
+                <li class="nav-item"><a  class="nav-link" routerLink="home">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" routerLink="recipe">Recipes</a></li>
+                <li class="nav-item" *ngIf="!isAuthenticated"><a class="nav-link" routerLink="/auth">Authentication</a></li>
+                <li class="nav-item"><a  class="nav-link" routerLink="list">AddIngredient</a></li>
+            </ul>
+    
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav " style="margin-right: 100px;">
+                <li class="nav-item "><a class="nav-link" routerLink="home">Home</a></li>
+                <li class="nav-item"><a  class="nav-link" routerLink="recipe">Recipes</a></li>
+                <li class="nav-item" *ngIf="isAuthenticated"><a class="nav-link" routerLink="list">AddIngredient</a></li>
+                <li class="nav-item" *ngIf="!isAuthenticated"><a class="nav-link" routerLink="/auth">Authentication</a></li>
+                <li class="nav-item"><a class="nav-link"routerLink="/shopping-list">Shopping List</a></li>
+            </ul>
+        </div>
+        <ul>
+            <li class="nav-item list-unstyled" *ngIf="isAuthenticated" (click)="onLogout()" style="margin-right: 20px; color:blue"><a class="nav-link" style="cursor: pointer;" routerLink="/auth">Logout</a></li>
+        </ul>
+    </div>
+</nav>

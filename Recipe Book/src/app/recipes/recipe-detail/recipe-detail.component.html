@@ -1,0 +1,25 @@
+
+
+<div class="comtainer"><h3 class="text-primary" style="padding-left:100px;">Recipe Detial</h3></div>
+<div class="container card" *ngFor="let detail of recipelist">
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="{{detail.imagePath }}" alt="" class="img-responsive" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered border-1">
+                <tr>
+                  <td>Name :</td>
+                  <td>{{ detail.name}} </td>  
+                </tr>
+                <tr>
+                  <td>Description:</td>
+                  <td>{{detail.description }} </td>  
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</div>
