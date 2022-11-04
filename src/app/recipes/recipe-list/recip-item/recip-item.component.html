@@ -1,0 +1,17 @@
+<a 
+    href="#" 
+    class="list-group clearfix mt-3" routerLink="recipe-detail">
+    <div class="row mt-2 stripedd"  style="border: solid 2px #e1e6ed;" *ngFor="let recipe of recipes">
+        <div class="col-8">
+            <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+            <p class="list-group-item-text">{{ recipe.description }}</p>
+        </div>
+        <div class="col-4">
+            <img 
+            [src]="recipe.imagePath" 
+            alt="{{ recipe.name}} " 
+            class="img-responsive " 
+            style="max-height: 8vh;max-width: 10vw;">
+        </div>
+    </div>
+</a>
