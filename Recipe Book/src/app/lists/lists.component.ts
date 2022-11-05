@@ -36,7 +36,8 @@ export class ListsComponent implements OnInit {
     this.ingredientService.AddIngredient(posts).subscribe(data=>{
       console.log(data)
     })
-  
+   
+    this.signupForm.reset()
     }
 
 
